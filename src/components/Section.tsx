@@ -7,15 +7,13 @@ const Section = ({ title, children }: any) => {
   return (
     <section style={{ marginBottom: "15mm", color: "black" }}>
       <Typography
-        variant="h2"
-        component="h2"
-        style={{
-          borderBottom: "2px solid #000",
-          paddingBottom: "0.5em",
+        sx={{
+          borderBottom: "1px solid #000",
           marginBottom: "1em",
+          fontWeight: "600",
         }}
       >
-        {title}
+        {title.toUpperCase()}
       </Typography>
       {children}
     </section>
