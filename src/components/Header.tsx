@@ -29,42 +29,42 @@ const Header = () => {
           </Typography>
           <Stack direction="row" spacing={5}>
             <Stack>
-              <Typography fontWeight={"700"} fontSize={14}>
+              <Typography fontWeight={"700"} fontSize={13}>
                 Ngày sinh:
               </Typography>
-              <Typography fontWeight={"700"} fontSize={14}>
+              <Typography fontWeight={"700"} fontSize={13}>
                 Giới tính:
               </Typography>
-              <Typography fontWeight={"700"} fontSize={14}>
+              <Typography fontWeight={"700"} fontSize={13}>
                 Điện thoại:
               </Typography>
-              <Typography fontWeight={"700"} fontSize={14}>
+              <Typography fontWeight={"700"} fontSize={13}>
                 Email:
               </Typography>
-              <Typography fontWeight={"700"} fontSize={14}>
+              <Typography fontWeight={"700"} fontSize={13}>
                 Địa chỉ:
               </Typography>
-              <Typography fontWeight={"700"} fontSize={14}>
+              <Typography fontWeight={"700"} fontSize={13}>
                 Website:
               </Typography>
             </Stack>
             <Stack>
-              <Typography fontWeight={"400"} fontSize={14}>
+              <Typography fontWeight={"400"} fontSize={13}>
                 16/01/1998
               </Typography>
-              <Typography fontWeight={"400"} fontSize={14}>
+              <Typography fontWeight={"400"} fontSize={13}>
                 Nam
               </Typography>
-              <Typography fontWeight={"400"} fontSize={14}>
+              <Typography fontWeight={"400"} fontSize={13}>
                 0376105680
               </Typography>
-              <Typography fontWeight={"400"} fontSize={14}>
+              <Typography fontWeight={"400"} fontSize={13}>
                 lamquyet.job@gmail.com
               </Typography>
-              <Typography fontWeight={"400"} fontSize={14}>
+              <Typography fontWeight={"400"} fontSize={13}>
                 Họ - Kiên Lao - Lục Ngạn - Bắc Giang
               </Typography>
-              <Typography fontWeight={"400"} fontSize={14}>
+              <Typography fontWeight={"400"} fontSize={13}>
                 https://www.facebook.com/lamquyet9x/
               </Typography>
             </Stack>
