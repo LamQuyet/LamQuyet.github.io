@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <Layout>
       <Header />
-      <Section title="Học vấn">
+      <Section title="Education">
         <Grid2 container>
           <Grid2 xs={3}>
             <Typography fontWeight={"400"} fontSize={13}>
