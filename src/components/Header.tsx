@@ -26,7 +26,7 @@ const Header = () => {
         <Stack direction="column" spacing={1} flex={1}>
           <Typography variant="h4">Lâm Văn Quyết</Typography>
           <Typography variant="h6">React Native developer</Typography>
-          <Stack spacing={1}>
+          <Stack>
             <Grid2 container>
               <Grid2 xs={3}>
                 <Typography fontWeight={"700"} fontSize={13}>

@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Section from "../components/Section";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import TableComponent from "@/components/Table";
 
 const HomePage = () => {
   return (
@@ -61,12 +62,12 @@ const HomePage = () => {
           </Grid2>
         </Stack>
       </Section>
-      <Section title="Kinh nghiệm làm việc">
+      <Section title="Work experience">
         <Stack spacing={2}>
           <Grid2 container borderBottom={1} borderColor={"#eee"} pb={2}>
             <Grid2 xs={3}>
               <Typography fontWeight={"400"} fontSize={13}>
-                09/2023 - Hiện tại
+                09/2023 - Current
               </Typography>
             </Grid2>
             <Grid2 xs={9}>
@@ -75,11 +76,13 @@ const HomePage = () => {
                   ETC Technology System JSC
                 </Typography>
                 <Typography fontWeight={"400"} fontSize={13}>
-                  Lập trình viên mobile + website
+                  Developer
                 </Typography>
                 <Typography fontWeight={"400"} fontSize={13}>
-                  Tham gia phát triển ứng dụng quản lý nội bộ, nghiên cứu và
-                  phát triển các dự án bằng các công nghệ mới
+                  Maintain ERP application with React Native Join code Website
+                  with Nextjs framework + Materia UI. <br />
+                  Learn and update new technologies about mobile and website
+                  like Vue, Nextjs, Android Jetpack Compose, Flutter...
                 </Typography>
               </Stack>
             </Grid2>
@@ -96,12 +99,12 @@ const HomePage = () => {
                   SanboxVN
                 </Typography>
                 <Typography fontWeight={"400"} fontSize={13}>
-                  Lập trình viên React Native
+                  React Native developer
                 </Typography>
                 <Typography fontWeight={"400"} fontSize={13}>
-                  Tham gia phát triển và bảo trì các ứng dụng cung cấp nền tảng
-                  bán hàng online, ứng dụng quản lý cư dân- trạng thái bất động
-                  sản cho Ecopark
+                  Participate in developing and maintaining applications that
+                  provide online sales platforms, resident management
+                  applications, and real estate status for Ecopark.
                 </Typography>
               </Stack>
             </Grid2>
@@ -119,10 +122,11 @@ const HomePage = () => {
                   905 VN
                 </Typography>
                 <Typography fontWeight={"400"} fontSize={13}>
-                  Lập trình viên React Native
+                  React Native developer
                 </Typography>
                 <Typography fontWeight={"400"} fontSize={13}>
-                  Tham gia phát triển các ứng dụng cung cấp dịch vụ y tế.
+                  Participate in developing applications that provide healthcare
+                  services.
                 </Typography>
               </Stack>
             </Grid2>
@@ -140,12 +144,13 @@ const HomePage = () => {
                   Caerux Lab
                 </Typography>
                 <Typography fontWeight={"400"} fontSize={13}>
-                  Lập trình viên React Native
+                  React Native developer
                 </Typography>
                 <Typography fontWeight={"400"} fontSize={13}>
-                  Nghiên cứu về công nghệ WebRTC, SocketIO Tham gia phát triển
-                  các dự án về ứng dụng download các sticker cho thị trường Nhật
-                  Bản. Xây dựng và phát triển ứng dụng Matching.
+                  Research on WebRTC and SocketIO technologies. <br />
+                  Participate in developing projects related to sticker
+                  downloading applications for the Japanese market. <br />
+                  Build and develop matching applications.
                 </Typography>
               </Stack>
             </Grid2>
@@ -277,19 +282,12 @@ const HomePage = () => {
         </Stack>
       </Section>
       <Section title="Dự án">
-        <Typography variant="body1" component="p">
-          Project 1: Description and link.
-        </Typography>
-        <Typography variant="body1" component="p">
-          Project 2: Description and link.
-        </Typography>
+        <TableComponent />
       </Section>
-      <Section title="Contact">
-        <Typography variant="body1" component="p">
-          Email: youremail@example.com
-        </Typography>
-        <Typography variant="body1" component="p">
-          Phone: (123) 456-7890
+      <Section title="Hobby">
+        <Typography fontSize={13} fontWeight={"400"}>
+          Listen to music, watch movies, participate in sports activities, group
+          exercises.
         </Typography>
       </Section>
     </Layout>
