@@ -8,7 +8,7 @@ const Layout = ({ children }: any) => {
     <Container
       maxWidth="md"
       style={{
-        width: "210mm",
+        // width: "210mm",
         background: "white",
         padding: "20mm",
         margin: "20mm auto",
