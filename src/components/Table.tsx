@@ -8,49 +8,50 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import { Stack, Typography } from "@mui/material";
+import { ProjectType } from "@/type";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   border: "1px solid #ddd",
 }));
 
-function createData(title: string, content: string) {
-  return { title, content };
-}
-
-const rows = [
-  createData("Title 1", "Content for Title 1"),
-  createData("Title 2", "Content for Title 2"),
-  createData("Title 3", "Content for Title 3"),
-  createData("Title 4", "Content for Title 4"),
-  createData("Title 5", "Content for Title 5"),
-];
-
-export default function TableComponent() {
+export default function TableComponent({ data }: any) {
   return (
     <>
       <Stack>
-        <Typography fontWeight={"600"} fontSize={16}>
-          eGen, eVibe
-        </Typography>
-        <Typography fontWeight={"400"} fontSize={13}>
-          10/2023 - Current
-        </Typography>
-        <TableContainer component={Paper} sx={{ overflow: "visible" }}>
-          <Table aria-label="simple table">
-            <TableBody>
-              {rows.map((row, index) => (
-                <TableRow key={index}>
-                  <StyledTableCell sx={{ width: "30%" }}>
-                    {row.title}
-                  </StyledTableCell>
-                  <StyledTableCell sx={{ width: "70%" }}>
-                    {row.content}
-                  </StyledTableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        {data.map((row: ProjectType) => (
+          <>
+            <Typography fontWeight={"600"} fontSize={16}>
+              {row.project_name}
+            </Typography>
+            <Typography fontWeight={"400"} fontSize={13}>
+              10/2023 - Current
+            </Typography>
+            <TableContainer component={Paper}>
+              <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <TableBody>
+                  <TableRow
+                    key={row.project_name}
+                    sx={{
+                      "&:last-child td, &:last-child th": {
+                        border: 0,
+                        fontWeight: "900",
+                      },
+                    }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {row.customer_name}
+                    </TableCell>
+                    <TableCell align="right">{row.customer_name}</TableCell>
+                    <TableCell align="right">{row.customer_name}</TableCell>
+                    <TableCell align="right">{row.customer_name}</TableCell>
+                    <TableCell align="right">{row.customer_name}</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </>
+        ))}
+        ;
       </Stack>
     </>
   );

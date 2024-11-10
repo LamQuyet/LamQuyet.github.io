@@ -1,7 +1,7 @@
 'use client'
 import { useTheme, useMediaQuery } from "@mui/material";
 
- const useGetFontSize = (baseSize: number) => {
+ const FontSize = (baseSize: number) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
@@ -12,7 +12,7 @@ import { useTheme, useMediaQuery } from "@mui/material";
 };
 
 
- const useGetSpacing = (baseSpacing: number) => {
+ const Spacing = (baseSpacing: number) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
@@ -22,4 +22,4 @@ import { useTheme, useMediaQuery } from "@mui/material";
   return baseSpacing;
 };
 
-export {useGetFontSize, useGetSpacing}
+export {FontSize, Spacing}
