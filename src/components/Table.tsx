@@ -9,49 +9,56 @@ import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import { Stack, Typography } from "@mui/material";
 import { ProjectType } from "@/type";
-
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  border: "1px solid #ddd",
-}));
+import { FontSize, Spacing } from "@/utils";
 
 export default function TableComponent({ data }: any) {
   return (
     <>
       <Stack>
         {data.map((row: ProjectType) => (
-          <>
-            <Typography fontWeight={"600"} fontSize={16}>
-              {row.project_name}
-            </Typography>
-            <Typography fontWeight={"400"} fontSize={13}>
-              10/2023 - Current
-            </Typography>
+          <Stack key={row.project_name} pb={4}>
+            <Stack spacing={0.5} pb={1}>
+              <Typography fontWeight={"600"} fontSize={FontSize(16)}>
+                {row.project_name}
+              </Typography>
+              <Typography fontWeight={"400"} fontSize={FontSize(13)}>
+                {`(${row.time_period})`}
+              </Typography>
+            </Stack>
             <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <Table sx={{ tableLayout: "auto" }} aria-label="simple table">
                 <TableBody>
-                  <TableRow
-                    key={row.project_name}
-                    sx={{
-                      "&:last-child td, &:last-child th": {
-                        border: 0,
-                        fontWeight: "900",
-                      },
-                    }}
-                  >
-                    <TableCell component="th" scope="row">
-                      {row.customer_name}
-                    </TableCell>
-                    <TableCell align="right">{row.customer_name}</TableCell>
-                    <TableCell align="right">{row.customer_name}</TableCell>
-                    <TableCell align="right">{row.customer_name}</TableCell>
-                    <TableCell align="right">{row.customer_name}</TableCell>
-                  </TableRow>
+                  {row.detail.map((item, index) => (
+                    <TableRow key={index}>
+                      <TableCell
+                        sx={{
+                          borderRightWidth: 1,
+                          fontWeight: "bold",
+                          fontSize: FontSize(13),
+                          paddingInline: Spacing(2),
+                        }}
+                        align="left"
+                        width={"20%"}
+                      >
+                        {item?.row_name}
+                      </TableCell>
+                      <TableCell
+                        width={"80%"}
+                        align="left"
+                        sx={{
+                          fontSize: FontSize(13),
+                          paddingInline: Spacing(2),
+                        }}
+                      >
+                        {item?.value}
+                      </TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </TableContainer>
-          </>
+          </Stack>
         ))}
-        ;
       </Stack>
     </>
   );
